@@ -11,7 +11,8 @@ from PIL import Image
 load_dotenv()
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config['UPLOAD_FOLDER'] = '/tmp'
+
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
